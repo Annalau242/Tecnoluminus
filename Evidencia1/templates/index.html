@@ -1,0 +1,258 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!-- Define el tipo de documento: HTML5 -->
+
+<html lang="es">
+<!-- Indica que el idioma principal del documento es español -->
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Define la codificación de caracteres para que se muestren correctamente los acentos y caracteres especiales -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Permite que el sitio sea adaptable a diferentes tamaños de pantalla (responsive) -->
+
+  <title>Tecnoluminus – Innovación & Sostenibilidad</title>
+  <!-- Título que aparece en la pestaña del navegador -->
+
+  <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+  <!-- Enlaza el archivo externo de estilos CSS -->
+
+  <script defer src="{% static 'script.js' %}"></script>
+  <!-- Enlaza el archivo JavaScript y lo carga al final para que no bloquee la carga del HTML -->
+</head>
+
+<body>
+  <!-- CABECERA -->
+  <header>
+    <img src="{% static 'logo-tecnoluminus.jpg' %}" alt="Logo Tecnoluminus" class="logo" />
+    <!-- Logo de la empresa -->
+
+    <h1>Tecnoluminus</h1>
+    <!-- Nombre de la empresa -->
+
+    <p>Iluminamos tu camino al futuro</p>
+    <!-- Eslogan de la empresa -->
+
+    <nav>
+      <!-- Menú de navegación con enlaces internos -->
+      <a href="#bienvenida">Inicio</a> |
+      <a href="#sobre-nosotros">Sobre nosotros</a> |
+      <a href="#servicios">Servicios</a> |
+      <a href="#equipo">Equipo</a> |
+      <a href="#proyectos">Proyectos</a> |
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BIENVENIDA -->
+    <section id="bienvenida">
+      <!-- Sección de bienvenida con introducción -->
+      <h2>Bienvenidos a Tecnoluminus</h2>
+      <p>Somos un consorcio mexicano especializado en alumbrado público...</p>
+      <img src="{% static 'oficina-interior.jpg' %}" alt="Interior de oficina tecnológica" />
+      <!-- Imagen ilustrativa -->
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+
+      <article>
+        <h3>Nuestra Historia</h3>
+        <p>Fundada en 2014, Tecnoluminus ha crecido rápidamente...</p>
+
+        <article>
+          <h2>¿Dónde estamos ubicados?</h2>
+          <!-- Muestra la dirección con enlace a Google Maps -->
+          <p>
+            📍 <a href="https://goo.gl/maps/7Xj3R4jWv7N2" target="_blank" rel="noopener noreferrer">
+              San Pedro Garza García, Nuevo León, México</a>
+          </p>
+        </article>
+      </article>
+
+      <article>
+        <h3>Misión y Visión</h3>
+        <!-- Valores institucionales -->
+        <p><strong>Misión:</strong> Mejorar la calidad de vida mediante soluciones tecnológicas sostenibles.</p>
+        <p><strong>Visión:</strong> Ser líderes en iluminación pública sustentable en México y América Latina.</p>
+      </article>
+    </section>
+
+    <!-- EQUIPO -->
+    <section id="equipo">
+      <h2>Conoce al Equipo</h2>
+      <ul>
+        <!-- Lista con los miembros principales del equipo -->
+        <li><strong>Ing. Ana Martínez</strong> – Directora de Tecnología</li>
+        <li><strong>Lic. Fernando Ruiz</strong> – Gerente de Proyectos</li>
+        <li><strong>Mtra. Laura García</strong> – Soporte y Capacitación</li>
+      </ul>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+      <h2>Proyectos Recientes</h2>
+      <p>Nuestros proyectos combinan sustentabilidad, ahorro y tecnología LED:</p>
+      <ul>
+        <!-- Lista de logros/proyectos realizados -->
+        <li>+80,000 luminarias operadas...</li>
+        <li>Reducción de hasta el 80 %...</li>
+        <li>Contratos PPP de hasta 20 años...</li>
+      </ul>
+      <aside class="galeria">
+        <!-- Galería de imágenes o logotipos -->
+        <img src="{% static 'logo-t-ilumina.jpg' %}" alt="Logotipo servicios Tecnoluminus" />
+        <img src="{% static 'logo-cigapp.webp' %}" alt="Modelo de negocios" />
+      </aside>
+    </section>
+
+    <!-- SERVICIOS - BOTONES Y SECCIONES -->
+    <section id="servicios">
+      <h2>Servicios Destacados</h2>
+
+      <nav class="tabs">
+        <!-- Botones que activan pestañas con JavaScript -->
+        <button class="tab" onclick="mostrarPestana('alumbrado')">Alumbrado Público</button>
+        <button class="tab" onclick="mostrarPestana('paneles')">Paneles Solares</button>
+        <button class="tab" onclick="mostrarPestana('reparacion')">Reparación y Mantenimiento</button>
+        <button class="tab" onclick="mostrarPestana('renovables')">Energías Renovables</button>
+      </nav>
+
+      <!-- Contenido de cada servicio (se muestra o se oculta con JS) -->
+      <div id="alumbrado" class="tab-content">
+        <h3>Sistemas de alumbrado público PPP</h3>
+        <p>Instalamos, modernizamos y operamos sistemas de alumbrado público...</p>
+        <ul>
+          <li>Modernización del 100%...</li>
+          <li>Luminarias LED de alta eficiencia...</li>
+          <li>Telegestión, monitoreo...</li>
+        </ul>
+        <img src="{% static 'proyecto-luminarias.jpg' %}" alt="Proyectos de alumbrado" />
+        <br><br>
+        <a class="btn-submit" href="alumbrado.html" target="_blank">Me interesa</a>
+        <!-- Botón que lleva a otra página con más información -->
+      </div>
+
+      <div id="paneles" class="tab-content" style="display:none">
+        <!-- Esta pestaña está oculta inicialmente -->
+        <h3>Paneles Solares</h3>
+        <p>Brindamos soluciones integrales...</p>
+        <ul>
+          <li>Diagnóstico...</li>
+          <li>Monitoreo...</li>
+          <li>Mantenimiento...</li>
+        </ul>
+        <img src="{% static 'logo-t-ilumina.jpg' %}" alt="Logo paneles solares" />
+        <br><br>
+        <a class="btn-submit" href="paneles.html" target="_blank">Me interesa</a>
+      </div>
+
+      <div id="reparacion" class="tab-content" style="display:none">
+        <h3>Reparación y Mantenimiento</h3>
+        <p>Ofrecemos servicios de reparación...</p>
+        <ul>
+          <li>Reparación rápida...</li>
+          <li>Mantenimiento de cableado...</li>
+          <li>Revisión periódica...</li>
+        </ul>
+        <img src="{% static 'oficina-interior.jpg' %}" alt="Oficina reparación" />
+        <br><br>
+        <a class="btn-submit" href="reparacion.html" target="_blank">Me interesa</a>
+      </div>
+
+      <div id="renovables" class="tab-content" style="display:none">
+        <h3>Sistemas de Energías Renovables</h3>
+        <p>Integramos tecnologías limpias...</p>
+        <ul>
+          <li>Implementación de energías...</li>
+          <li>Certificación de origen...</li>
+          <li>Reducción de dependencia...</li>
+        </ul>
+        <img src="{% static 'logo-cigapp.webp' %}" alt="Energías renovables" />
+        <br><br>
+        <a class="btn-submit" href="renovables.html" target="_blank">Me interesa</a>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>Tel: (81) 4161‑0020 | Email: contacto@tecnoluminus.com</p>
+
+      <form action="#" method="post">
+        <!-- Formulario de contacto -->
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <!-- Datos personales del usuario -->
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" name="telefono" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Motivo del contacto</legend>
+          <!-- Selección de servicio y mensaje -->
+          <label for="servicio">¿Qué servicio te interesa?</label>
+          <select id="servicio" name="servicio">
+            <option value="">--Selecciona uno--</option>
+            <option value="alumbrado">Sistemas de alumbrado público</option>
+            <option value="paneles">Paneles solares</option>
+            <option value="mantenimiento">Mantenimiento o reparación</option>
+            <option value="renovables">Sistemas de energías renovables</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escríbenos tu consulta aquí..." required></textarea>
+        </fieldset>
+
+        <div class="inline-group">
+          <!-- Aceptación de términos -->
+          <label>
+            <input type="checkbox" name="acepto" required />
+            Acepto el uso de mis datos para fines de contacto.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar mensaje</button>
+        <!-- Botón para enviar el formulario -->
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Pie de página con créditos -->
+    <p>&copy; 2025 Tecnoluminus. Proyecto académico sin fines de lucro.</p>
+    <p>Licitado en formato PPP – Sitio desarrollado por estudiantes de la UANL.</p>
+
+    <!-- Aquí va la sección de redes sociales -->
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/Tecnoluminus" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+      </a>
+      <a href="https://twitter.com/Tecnoluminus" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+      </a>
+      <a href="https://www.instagram.com/Tecnoluminus" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- botón flotante WhatsApp -->
+  <a href="https://wa.me/5211234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+
+</html>
+<!-- Este es el final del documento HTML -->

@@ -1,0 +1,174 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reparación y Mantenimiento – Tecnoluminus</title>
+  <style>
+    :root {
+      --color-primario: #0a7cff;
+      --color-secundario: #00d084;
+      --color-fondo: #f9fafc;
+      --color-texto: #222831;
+      --color-texto-sec: #4a4a4a;
+      --color-boton-fondo: var(--color-primario);
+      --color-boton-hover: #005bb5;
+      --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--fuente-principal);
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+      font-size: 16px;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: var(--color-primario);
+      font-weight: 900;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      letter-spacing: 1.4px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: var(--color-secundario);
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--color-secundario);
+      padding-bottom: 0.3rem;
+      letter-spacing: 1.1px;
+    }
+
+    p {
+      color: var(--color-texto-sec);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    ul {
+      background: white;
+      border-radius: 15px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
+      margin-bottom: 2rem;
+      list-style: inside disc;
+      color: var(--color-texto-sec);
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+      font-weight: 500;
+    }
+
+    .contratar {
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.05);
+      margin-bottom: 3rem;
+    }
+
+    .btn,
+    .btn-back {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background-color: var(--color-boton-fondo);
+      color: white;
+      font-weight: 700;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      user-select: none;
+      box-shadow: 0 5px 15px rgba(10, 124, 255, 0.6);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .btn:hover,
+    .btn:focus,
+    .btn-back:hover,
+    .btn-back:focus {
+      background-color: var(--color-boton-hover);
+      outline: none;
+    }
+
+    .btn-back {
+      background-color: var(--color-secundario);
+      box-shadow: 0 5px 15px rgba(0, 208, 132, 0.7);
+      border-radius: 40px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    /* Responsivo */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+        font-size: 15px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .btn,
+      .btn-back {
+        width: 100%;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Reparación y Mantenimiento</h1>
+  <p>En Tecnoluminus, garantizamos el funcionamiento continuo y eficiente de los sistemas de alumbrado y energía mediante servicios especializados de reparación y mantenimiento.</p>
+
+  <ul>
+    <li>Atención a fallas 24/7 mediante sistema de reporte en línea.</li>
+    <li>Reemplazo de luminarias, balastros, fotoceldas y sensores.</li>
+    <li>Mantenimiento preventivo mensual o trimestral.</li>
+    <li>Inspección técnica con informes de desempeño.</li>
+    <li>Soporte en campo y remoto con personal capacitado.</li>
+  </ul>
+
+  <div class="contratar">
+    <h2>¿Requieres mantenimiento o reparación?</h2>
+    <p>Agenda tu servicio técnico y recibe atención en menos de 48 horas. También ofrecemos contratos anuales para mantenimiento continuo con descuentos por volumen.</p>
+    <ul>
+      <li><strong>Correo:</strong> mantenimiento@tecnoluminus.com</li>
+      <li><strong>Teléfono:</strong> (81) 4161‑0020</li>
+      <li><strong>Ubicación:</strong> Torre ING, piso 12, San Pedro Garza García, N.L.</li>
+    </ul>
+    <a class="btn" href="mailto:mantenimiento@tecnoluminus.com?subject=Servicio%20de%20mantenimiento">¡Solicita servicio ahora!</a>
+  </div>
+
+  <a class="btn-back" href="index.html">← Volver a la página principal</a>
+</body>
+
+</html>
